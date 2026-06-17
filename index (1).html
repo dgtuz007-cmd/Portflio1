@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ofoq Boboxonov — Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Orqa fondagi "terminal" panel -->
+<div class="bg-grid" aria-hidden="true"></div>
+
+<!-- Yon navigatsiya -->
+<nav class="dock">
+<a href="#hero" class="dock__item" data-label="bosh">~</a>
+<a href="#about" class="dock__item" data-label="men">$ whoami</a>
+<a href="#projects" class="dock__item" data-label="loyihalar">$ ls projects/</a>
+<a href="#skills" class="dock__item" data-label="skill">$ stack</a>
+<a href="#contact" class="dock__item" data-label="aloqa">$ contact</a>
+<button class="dock__theme" id="themeToggle" aria-label="Mavzuni almashtirish" title="light/dark">◐</button>
+</nav>
+
+<!-- HERO -->
+<header id="hero" class="hero">
+<div class="hero__inner">
+<p class="hero__eyebrow">// portfolio.init()</p>
+<h1 class="hero__title">
+<span class="hero__greet">Salom, men</span>
+<span class="hero__name" id="typedName"></span><span class="hero__cursor">_</span>
+</h1>
+<p class="hero__role">Web Developer — <span class="accent">HTML</span> · <span class="accent">CSS</span> · <span class="accent">JavaScript</span></p>
+<p class="hero__tagline">Brauzerda ishlaydigan narsalarni yozaman va har bir loyihada bittadan yangi narsa o'rganaman.</p>
+<div class="hero__cta">
+<a href="#projects" class="btn btn--primary">Loyihalarni ko'rish</a>
+<a href="#contact" class="btn btn--ghost">Bog'lanish</a>
+</div>
+</div>
+<div class="hero__terminal" aria-hidden="true">
+<div class="term__bar">
+<span class="term__dot term__dot--r"></span>
+<span class="term__dot term__dot--y"></span>
+<span class="term__dot term__dot--g"></span>
+<span class="term__file">about.js</span>
+</div>
+<pre class="term__body"><code><span class="tk-kw">const</span> <span class="tk-var">developer</span> = {
+  <span class="tk-prop">ism</span>: <span class="tk-str">"Ofoq Boboxonov"</span>,
+  <span class="tk-prop">rol</span>: <span class="tk-str">"Web Developer"</span>,
+  <span class="tk-prop">stack</span>: [<span class="tk-str">"HTML"</span>, <span class="tk-str">"CSS"</span>, <span class="tk-str">"JS"</span>],
+  <span class="tk-prop">o'rganmoqda</span>: <span class="tk-bool">true</span>,
+  <span class="tk-prop">qabul</span><span class="tk-punc">:</span> <span class="tk-kw">function</span><span class="tk-punc">()</span> {
+    <span class="tk-kw">return</span> <span class="tk-str">"loyihalar bilan ishlaymiz 🤝"</span><span class="tk-punc">;</span>
+  }
+};</code></pre>
+</div>
+</header>
+
+<main>
+<!-- ABOUT -->
+<section id="about" class="section about">
+<p class="section__tag">$ whoami</p>
+<div class="about__grid">
+<div class="about__text">
+<h2 class="section__title">Men haqimda</h2>
+<p>Men frontend dunyosiga qadam qo'ygan web-dasturchiman. HTML va CSS bilan tartibni, JavaScript bilan harakatni o'rganaman — har bir loyiha menga yangi bir "aha" lahzasini beradi.</p>
+<p>Bu sayt ham aslida o'z-o'zidan loyiha: uni qurish davomida sof JS bilan animatsiya, tema almashtirish va responsiv dizaynni mashq qildim.</p>
+<div class="about__facts">
+<div class="fact">
+<span class="fact__num">3+</span>
+<span class="fact__label">oy faol o'rganish</span>
+</div>
+<div class="fact">
+<span class="fact__num">12</span>
+<span class="fact__label">mini-loyiha</span>
+</div>
+<div class="fact">
+<span class="fact__num">∞</span>
+<span class="fact__label">Stack Overflow tabs</span>
+</div>
+</div>
+</div>
+<div class="about__card">
+<div class="term__bar">
+<span class="term__dot term__dot--r"></span>
+<span class="term__dot term__dot--y"></span>
+<span class="term__dot term__dot--g"></span>
+<span class="term__file">journey.log</span>
+</div>
+<ul class="timeline">
+<li><span class="timeline__date">01</span> HTML &amp; CSS asoslarini o'rgandim</li>
+<li><span class="timeline__date">02</span> Birinchi mini-loyihalarni qildim</li>
+<li><span class="timeline__date">03</span> Bu portfolioni qurdim — siz hozir shu yerdasiz</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects">
+<p class="section__tag">$ ls projects/</p>
+<h2 class="section__title">Loyihalar</h2>
+<p class="section__sub">O'rganish davomida qilingan ishlardan namunalar. Har birini o'zingizning loyihalaringiz bilan almashtiring.</p>
+<div class="projects__grid">
+<article class="card">
+<div class="card__media" data-emoji="🧮"></div>
+<div class="card__body">
+<h3 class="card__title">Kalkulyator</h3>
+<p class="card__desc">Klaviatura bilan ham ishlaydigan, sof JavaScript'da yozilgan kalkulyator.</p>
+<div class="card__tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+<div class="card__links">
+<a href="#" class="link">Kod →</a>
+<a href="#" class="link">Demo →</a>
+</div>
+</div>
+</article>
+
+<article class="card">
+<div class="card__media" data-emoji="✅"></div>
+<div class="card__body">
+<h3 class="card__title">Vazifalar ro'yxati</h3>
+<p class="card__desc">LocalStorage'da saqlanadigan, qo'shish/o'chirish funksiyali to-do ilova.</p>
+<div class="card__tags"><span>JS</span><span>LocalStorage</span></div>
+<div class="card__links">
+<a href="#" class="link">Kod →</a>
+<a href="#" class="link">Demo →</a>
+</div>
+</div>
+</article>
+
+<article class="card">
+<div class="card__media" data-emoji="🌦️"></div>
+<div class="card__body">
+<h3 class="card__title">Ob-havo ilovasi</h3>
+<p class="card__desc">Ochiq API orqali shahar bo'yicha ob-havo ma'lumotini ko'rsatadigan sahifa.</p>
+<div class="card__tags"><span>API</span><span>Fetch</span><span>CSS</span></div>
+<div class="card__links">
+<a href="#" class="link">Kod →</a>
+<a href="#" class="link">Demo →</a>
+</div>
+</div>
+</article>
+
+<article class="card">
+<div class="card__media" data-emoji="📝"></div>
+<div class="card__body">
+<h3 class="card__title">Blog maketi</h3>
+<p class="card__desc">Sof CSS bilan qilingan, to'liq responsiv blog dizayni.</p>
+<div class="card__tags"><span>HTML</span><span>CSS Grid</span></div>
+<div class="card__links">
+<a href="#" class="link">Kod →</a>
+<a href="#" class="link">Demo →</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section skills">
+<p class="section__tag">$ stack --list</p>
+<h2 class="section__title">Ko'nikmalar</h2>
+<div class="skills__grid">
+<div class="skill">
+<div class="skill__head"><span>HTML</span><span class="skill__pct">85%</span></div>
+<div class="skill__bar"><div class="skill__fill" style="--level:85%"></div></div>
+</div>
+<div class="skill">
+<div class="skill__head"><span>CSS</span><span class="skill__pct">75%</span></div>
+<div class="skill__bar"><div class="skill__fill" style="--level:75%"></div></div>
+</div>
+<div class="skill">
+<div class="skill__head"><span>JavaScript</span><span class="skill__pct">0%</span></div>
+<div class="skill__bar"><div class="skill__fill" style="--level:0%"></div></div>
+</div>
+<div class="skill">
+<div class="skill__head"><span>Git / GitHub</span><span class="skill__pct">60%</span></div>
+<div class="skill__bar"><div class="skill__fill" style="--level:60%"></div></div>
+</div>
+<div class="skill">
+<div class="skill__head"><span>Responsive Design</span><span class="skill__pct">0%</span></div>
+<div class="skill__bar"><div class="skill__fill" style="--level:0%"></div></div>
+</div>
+<div class="skill">
+<div class="skill__head"><span>React (o'rganmoqdaman)</span><span class="skill__pct">0%</span></div>
+<div class="skill__bar"><div class="skill__fill" style="--level:0%"></div></div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+<div class="contact__box">
+<p class="section__tag">$ contact --send</p>
+<h2 class="section__title">Bog'lanish</h2>
+<p class="section__sub">Loyiha taklifi bormi yoki shunchaki salom aytmoqchimisiz — yozing.</p>
+<form class="form" id="contactForm">
+<div class="form__row">
+<label for="name">Ismingiz</label>
+<input type="text" id="name" name="name" placeholder="Sizning ismingiz" required>
+</div>
+<div class="form__row">
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="email@misol.com" required>
+</div>
+<div class="form__row">
+<label for="message">Xabar</label>
+<textarea id="message" name="message" rows="4" placeholder="Nima haqida yozmoqchisiz?" required></textarea>
+</div>
+<button type="submit" class="btn btn--primary form__submit">Yuborish</button>
+<p class="form__status" id="formStatus" aria-live="polite"></p>
+</form>
+<div class="contact__socials">
+<a href="#" class="social">GitHub</a>
+<a href="#" class="social">LinkedIn</a>
+<a href="#" class="social">Telegram</a>
+<a href="mailto:aziz@example.com" class="social">Email</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<p>© <span id="year"></span> Ofoq Boboxonov · sof HTML, CSS va JS bilan qurilgan</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
